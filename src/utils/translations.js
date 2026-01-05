@@ -20,7 +20,7 @@ export const fr = {
     stats: [
         { label: "Projets Réalisés", value: "250+", suffix: "" },
         { label: "ROI Moyen", value: "4.5", suffix: "x" },
-        { label: "Budget Managé", value: "2", suffix: "M€+" },
+        { label: "Années d'Expérience", value: "5", suffix: "+" },
         { label: "Clients Satisfaits", value: "98", suffix: "%" }
     ],
     expertise: {
@@ -120,9 +120,7 @@ export const fr = {
         },
         infoTitle: "Coordonnées",
         scheduleTitle: "Réserver un Appel",
-        scheduleDesc: "Session stratégique gratuite de 30 min",
-        deckTitle: "Présentation Agence",
-        deckDesc: "Téléchargez notre présentation complète"
+        scheduleDesc: "Session stratégique gratuite de 30 min"
     },
     footer: {
         desc: "L'agence marketing qui transforme vos données en levier de croissance.",
@@ -224,7 +222,7 @@ export const fr = {
         office: {
             title: "Siège Social",
             address: "Casablanca, Morocco",
-            phone: "+212 770 358 848",
+            phone: "+212 660 583 710",
             email: "contact@optidigital.ma"
         },
         socials: {
@@ -253,7 +251,7 @@ export const en = {
     stats: [
         { label: "Projects Completed", value: "250+", suffix: "" },
         { label: "Average ROI", value: "4.5", suffix: "x" },
-        { label: "Budget Managed", value: "2", suffix: "M€+" },
+        { label: "Years of Experience", value: "5", suffix: "+" },
         { label: "Client Satisfaction", value: "98", suffix: "%" }
     ],
     expertise: {
@@ -353,9 +351,7 @@ export const en = {
         },
         infoTitle: "Contact Info",
         scheduleTitle: "Schedule a Call",
-        scheduleDesc: "Free 30-min strategy session",
-        deckTitle: "Agency Presentation",
-        deckDesc: "Download our complete deck"
+        scheduleDesc: "Free 30-min strategy session"
     },
     footer: {
         desc: "The marketing agency that turns your data into a growth lever.",
@@ -457,7 +453,7 @@ export const en = {
         office: {
             title: "Headquarters",
             address: "Casablanca, Morocco",
-            phone: "+212 770 358 848",
+            phone: "+212 660 583 710",
             email: "contact@optidigital.ma"
         },
         socials: {

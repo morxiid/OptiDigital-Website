@@ -445,8 +445,8 @@ const Home = () => {
                                         className="bg-[#0b1120] p-6 rounded-3xl shadow-xl rotate-2 hover:rotate-0 transition-transform duration-500 text-white"
                                         whileHover={{ y: -5 }}
                                     >
-                                        <div className="text-brand-lime font-black text-3xl mb-1">+1.5M</div>
-                                        <div className="text-xs text-gray-400 font-bold uppercase tracking-tighter">Ad Spend Managé</div>
+                                        <div className="text-brand-lime font-black text-3xl mb-1">+5 Ans</div>
+                                        <div className="text-xs text-gray-400 font-bold uppercase tracking-tighter">D'Expertise</div>
                                         <div className="mt-4 flex items-end gap-1 h-8">
                                             {[30, 60, 45, 90, 75, 100].map((h, i) => (
                                                 <div key={i} className="bg-brand-lime/20 w-full rounded-t-sm" style={{ height: `${h}%` }}></div>
@@ -661,7 +661,7 @@ const Home = () => {
                                         <div className="flex-shrink-0 w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-brand-blue">
                                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                                         </div>
-                                        <a href="tel:+212770358848" className="hover:text-brand-blue transition-colors text-sm font-medium">+212 770 358 848</a>
+                                        <a href="tel:+212660583710" className="hover:text-brand-blue transition-colors text-sm font-medium">+212 660 583 710</a>
                                     </li>
                                     <li className="flex items-center gap-4">
                                         <div className="flex-shrink-0 w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-brand-blue">
@@ -688,7 +688,7 @@ const Home = () => {
                                 <h4 className="font-bold text-xl mb-2">{t.contactHome.scheduleTitle}</h4>
                                 <p className="text-blue-100 text-sm mb-6">{t.contactHome.scheduleDesc}</p>
                                 <a
-                                    href="https://wa.me/212770358848?text=Bonjour%20OptiDigital,%20je%20souhaite%20réserver%20un%20appel%20stratégique."
+                                    href="https://calendly.com/contact-optidigital/30min"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-block px-6 py-3 bg-white text-brand-blue font-bold rounded-xl hover:bg-gray-50 transition-colors shadow-lg w-full"
@@ -697,23 +697,7 @@ const Home = () => {
                                 </a>
                             </motion.div>
 
-                            {/* Card 3: Agency Deck */}
-                            <motion.div
-                                className="bg-gray-100 p-8 rounded-3xl border border-gray-200 text-center group cursor-pointer hover:border-brand-blue/30 transition-colors"
-                                initial={{ opacity: 0, x: 30 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: 0.4 }}
-                            >
-                                <div className="text-brand-blue w-12 h-12 mx-auto mb-3 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
-                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
-                                </div>
-                                <h4 className="font-bold text-xl mb-2 text-gray-900">{t.contactHome.deckTitle}</h4>
-                                <p className="text-gray-500 text-sm mb-6">{t.contactHome.deckDesc}</p>
-                                <a href="/Presentation.pdf" download className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-700 font-bold rounded-xl border border-gray-200 hover:border-brand-blue hover:text-brand-blue transition-all shadow-sm w-full">
-                                    Download PDF
-                                </a>
-                            </motion.div>
+
                         </div>
                     </div>
                 </div>

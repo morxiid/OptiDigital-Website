@@ -112,10 +112,9 @@ const Contact = () => {
                                 <h3 className="font-black text-xs uppercase tracking-widest text-brand-lime mb-6">{t.contactPage.socials.title}</h3>
                                 <div className="flex gap-4">
                                     {[
-                                        { name: 'facebook', link: 'https://www.facebook.com/optidigital.ma/', icon: <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" /> },
+                                        { name: 'facebook', link: 'https://www.facebook.com/profile.php?id=61567630357718&locale=fr_FR', icon: <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" /> },
                                         { name: 'instagram', link: 'https://www.instagram.com/optidigital.ma/', icon: <><rect x="2" y="2" width="20" height="20" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" /><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" /></> },
-                                        { name: 'youtube', link: 'https://www.youtube.com/@optidigitalma', icon: <><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 00-1.94 2C1 8.14 1 12 1 12s0 3.86.46 5.58a2.78 2.78 0 001.94 2c1.72.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 001.94-2C23 15.86 23 12 23 12s0-3.86-.46-5.58z" /><polyline points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" /></> },
-                                        { name: 'linkedin', link: 'https://www.linkedin.com/company/optidigitalma', icon: <><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" /></> }
+                                        { name: 'linkedin', link: 'https://www.linkedin.com/company/optidigital-agency/?viewAsMember=true', icon: <><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" /></> }
                                     ].map((social, i) => (
                                         <a
                                             key={i}
@@ -134,22 +133,28 @@ const Contact = () => {
                             </div>
                         </motion.div>
 
+                        {/* Card: Schedule Call (Blue) */}
                         <motion.div
+                            className="bg-brand-blue p-10 rounded-[2.5rem] shadow-xl text-white text-center relative overflow-hidden group"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.2 }}
-                            className="bg-gray-50 p-10 rounded-[2.5rem] border border-gray-100 group cursor-pointer"
                         >
-                            <h3 className="text-xl font-black mb-4 group-hover:text-brand-blue transition-colors">Digital Deck 2026</h3>
-                            <p className="text-gray-500 mb-8 leading-relaxed">Téléchargez notre portfolio complet et nos méthodologies de travail au format PDF.</p>
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl -mr-16 -mt-16 transition-transform group-hover:scale-150"></div>
+
+                            <div className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl mx-auto mb-4 flex items-center justify-center text-white ring-1 ring-white/20">
+                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                            </div>
+                            <h4 className="font-bold text-xl mb-2">{t.contactHome.scheduleTitle}</h4>
+                            <p className="text-blue-100 text-sm mb-6">{t.contactHome.scheduleDesc}</p>
                             <a
-                                href="/Presentation.pdf"
-                                download
-                                className="flex items-center gap-3 font-black text-sm uppercase tracking-widest outline-none"
+                                href="https://calendly.com/contact-optidigital/30min"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-block px-6 py-3 bg-white text-brand-blue font-bold rounded-xl hover:bg-gray-50 transition-colors shadow-lg w-full"
                             >
-                                Download PDF
-                                <div className="w-8 h-[2px] bg-gray-900 group-hover:w-12 group-hover:bg-brand-blue transition-all"></div>
+                                Book Now
                             </a>
                         </motion.div>
                     </div>
@@ -276,8 +281,8 @@ const Contact = () => {
                         </form>
                     </motion.div>
                 </div>
-            </section>
-        </div>
+            </section >
+        </div >
     );
 };
 
