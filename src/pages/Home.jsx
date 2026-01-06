@@ -10,7 +10,7 @@ const clientLogosModules = import.meta.glob('../assets/Clients logo/*.{png,jpg,j
 const clientLogos = Object.values(clientLogosModules).map(mod => mod.default);
 
 const Home = () => {
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
     const [status, setStatus] = React.useState(null);
 
     const handleSubmit = (e) => {
@@ -215,13 +215,8 @@ const Home = () => {
                                 <h3 className="text-3xl md:text-4xl font-extrabold mb-5 leading-tight group-hover:text-brand-lime transition-colors duration-300">
                                     {t.expertise.card1.title}
                                 </h3>
-                                <p className="text-gray-400 text-lg leading-relaxed mb-8 font-light">
-                                    {t.expertise.card1.desc.split('interaction client').map((part, i) => (
-                                        <span key={i}>
-                                            {part}
-                                            {i === 0 && <span className="text-white font-semibold drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]">interaction client</span>}
-                                        </span>
-                                    ))}
+                                <p className="text-gray-400 text-lg leading-relaxed mb-8 font-light italic">
+                                    "{t.expertise.card1.desc}"
                                 </p>
 
                                 <div className="space-y-4 mb-10">
@@ -279,13 +274,8 @@ const Home = () => {
                                 <h3 className="text-3xl md:text-4xl font-extrabold mb-5 leading-tight group-hover:text-brand-lime transition-colors duration-300">
                                     {t.expertise.card2.title}
                                 </h3>
-                                <p className="text-gray-400 text-lg leading-relaxed mb-8 font-light">
-                                    {t.expertise.card2.desc.split('présence en ligne dynamique').map((part, i) => (
-                                        <span key={i}>
-                                            {part}
-                                            {i === 0 && <span className="text-white font-semibold drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]">présence en ligne dynamique</span>}
-                                        </span>
-                                    ))}
+                                <p className="text-gray-400 text-lg leading-relaxed mb-8 font-light italic">
+                                    "{t.expertise.card2.desc}"
                                 </p>
 
                                 <div className="space-y-4 mb-10">
@@ -313,36 +303,128 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Our Process Section */}
-            <section className="py-24 bg-brand-blue/5">
-                <div className="container-custom">
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold mb-4">{t.process.title}</h2>
-                        <p className="text-gray-600 max-w-2xl mx-auto">{t.process.subtitle}</p>
+            {/* Creative Process Section */}
+            <section className="py-32 bg-white relative overflow-hidden">
+                {/* Decorative Background Elements */}
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none opacity-5">
+                    <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-blue rounded-full blur-[120px] animate-pulse"></div>
+                    <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-brand-lime rounded-full blur-[120px] animate-pulse delay-1000"></div>
+                </div>
+
+                <div className="container-custom relative z-10">
+                    <div className="text-center max-w-3xl mx-auto mb-24">
+                        <motion.span
+                            initial={{ opacity: 0, y: 10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="text-brand-blue font-black tracking-[0.3em] uppercase text-sm mb-4 block"
+                        >
+                            {language === 'fr' ? 'Méthodologie' : 'Methodology'}
+                        </motion.span>
+                        <motion.h2
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.1 }}
+                            className="text-5xl md:text-6xl font-black text-gray-900 mb-8 tracking-tighter"
+                        >
+                            {language === 'fr' ? (
+                                <>Notre <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-blue-600">Processus</span> de Succès</>
+                            ) : (
+                                <>Our Success <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-blue-600">Process</span></>
+                            )}
+                        </motion.h2>
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.2 }}
+                            className="text-xl text-gray-500 font-light leading-relaxed"
+                        >
+                            {t.process.subtitle}
+                        </motion.p>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-                        {t.process.steps.map((step, idx) => (
+
+                    <div className="relative">
+                        {/* Connecting Path Line (Desktop) */}
+                        <div className="hidden lg:block absolute top-[50%] left-0 w-full h-[2px] bg-gray-100 -z-10 overflow-hidden">
                             <motion.div
-                                key={idx}
-                                className="relative p-6 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow group"
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: idx * 0.1 }}
+                                className="h-full bg-gradient-to-r from-brand-blue via-blue-400 to-brand-lime"
+                                initial={{ x: "-100%" }}
+                                whileInView={{ x: "0%" }}
                                 viewport={{ once: true }}
-                            >
-                                <div className="w-12 h-12 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue font-bold text-xl mb-4 group-hover:bg-brand-blue group-hover:text-white transition-colors">
-                                    {idx + 1}
-                                </div>
-                                <h3 className="font-bold text-lg mb-2">{step.title}</h3>
-                                <p className="text-gray-500 text-sm leading-relaxed">{step.desc}</p>
-                                {idx < 3 && (
-                                    <div className="hidden md:block absolute top-10 -right-4 w-8 h-[2px] bg-gray-200"></div>
-                                )}
-                            </motion.div>
-                        ))}
+                                transition={{ duration: 2, ease: "easeInOut" }}
+                            />
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+                            {t.process.steps.map((step, idx) => (
+                                <motion.div
+                                    key={idx}
+                                    className="relative group h-full"
+                                    initial={{ opacity: 0, y: 40 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.6, delay: idx * 0.15 }}
+                                >
+                                    {/* Large Background Number */}
+                                    <div className="absolute -top-12 left-0 text-9xl font-black text-gray-50 opacity-0 group-hover:opacity-100 transition-opacity duration-700 select-none -z-10">
+                                        0{idx + 1}
+                                    </div>
+
+                                    <div className="h-full bg-white rounded-[2.5rem] p-10 shadow-xl shadow-gray-100 border border-gray-50 transition-all duration-500 hover:shadow-2xl hover:shadow-brand-blue/5 hover:-translate-y-2 flex flex-col items-center text-center">
+                                        <div className="relative mb-10">
+                                            {/* Pulsing ring around icon */}
+                                            <motion.div
+                                                className="absolute inset-0 bg-brand-blue/5 rounded-full scale-150 blur-xl"
+                                                animate={{ scale: [1.2, 1.8, 1.2], opacity: [0.3, 0.6, 0.3] }}
+                                                transition={{ duration: 3, repeat: Infinity }}
+                                            />
+                                            <div className="relative w-20 h-20 rounded-3xl bg-gradient-to-br from-brand-blue to-blue-600 flex items-center justify-center text-4xl shadow-xl shadow-brand-blue/20 transform group-hover:rotate-6 transition-transform">
+                                                {step.icon}
+                                                <div className="absolute -bottom-2 -right-2 w-8 h-8 rounded-full bg-brand-lime border-4 border-white flex items-center justify-center text-xs font-black text-white">
+                                                    {idx + 1}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <h3 className="text-2xl font-black text-gray-900 mb-4 group-hover:text-brand-blue transition-colors">
+                                            {step.title}
+                                        </h3>
+                                        <p className="text-gray-500 leading-relaxed font-medium">
+                                            {step.desc}
+                                        </p>
+
+                                        {/* Hover Indicator */}
+                                        <div className="mt-auto pt-8 flex gap-1 items-center justify-center overflow-hidden">
+                                            {[1, 2, 3].map(i => (
+                                                <motion.div
+                                                    key={i}
+                                                    className="w-2 h-2 rounded-full bg-brand-lime/20"
+                                                    animate={{
+                                                        backgroundColor: i === 1 ? ["#d4ff3d", "#d4ff3d33"] : "#d4ff3d33",
+                                                        scale: i === 1 ? [1, 1.2, 1] : 1
+                                                    }}
+                                                    transition={{ duration: 2, repeat: Infinity, delay: i * 0.2 }}
+                                                />
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    {/* Mobile/Tablet Connecting Dots */}
+                                    {idx < 3 && (
+                                        <div className="lg:hidden flex flex-col items-center py-6">
+                                            {[1, 2, 3].map(i => (
+                                                <div key={i} className="w-1.5 h-1.5 rounded-full bg-gray-200 mb-2"></div>
+                                            ))}
+                                        </div>
+                                    )}
+                                </motion.div>
+                            ))}
+                        </div>
                     </div>
                 </div>
-            </section >
+            </section>
 
             {/* Why Us / Performance Analytics Section */}
             <section className="py-24 bg-white relative overflow-hidden">
