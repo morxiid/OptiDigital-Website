@@ -6,7 +6,7 @@ export const fr = {
         home: "Accueil",
         about: "À propos",
         services: "Services",
-        projects: "Projets",
+        blogs: "Blogs",
         contact: "Contact"
     },
     hero: {
@@ -24,29 +24,29 @@ export const fr = {
         { label: "Clients Satisfaits", value: "98", suffix: "%" }
     ],
     expertise: {
-        title: "Résultats Prouvés, Croissance Accélérée",
-        subtitle: "Découvrez comment nous transformons les métriques en revenus tangibles grâce à nos stratégies sur-mesure.",
+        title: "Expertise de Pointe, Impact Mesurable",
+        subtitle: "Nous combinons créativité audiovisuelle et intelligence publicitaire pour des résultats hors normes.",
         card1: {
-            badge: "Engagement Social",
-            title: "Boosez l'Engagement, Multipliez les Profits !",
-            desc: "Nous augmentons l'interaction client sur les réseaux sociaux avec des stratégies de contenu innovantes et un ciblage intelligent.",
-            benefits: ["+150% d'interaction", "Stratégie de contenu virale"]
+            badge: "Contenu & Social",
+            title: "Captez l'attention avec un contenu d'exception",
+            desc: "Nous créons des productions audiovisuelles percutantes et gérons vos réseaux sociaux pour transformer l'audience en communauté fidèle.",
+            benefits: ["Production Vidéo 4K", "Storytelling Stratégique"]
         },
         card2: {
-            badge: "Performance Ads",
-            title: "Optimisez vos Revenus : La Rentabilité Simplifiée",
-            desc: "Nous forgeons une présence en ligne dynamique en intégrant des solutions marketing holistiques dépassant la simple visibilité.",
-            benefits: ["Maximisation du ROAS", "Campagnes basées sur la data"]
+            badge: "Performance & Ads",
+            title: "Maximisez votre visibilité et votre ROI",
+            desc: "Optimisation experte de vos campagnes Media Buying et déploiement de sites web haute performance pour une conversion maximale.",
+            benefits: ["ROAS Optimisé", "Sites Web High-Performance"]
         }
     },
     process: {
         title: "Notre Processus de Succès",
         subtitle: "Une méthodologie rigoureuse pour des résultats prévisibles.",
         steps: [
-            { title: "Audit & Analyse", desc: "Nous analysons votre marché, vos concurrents et vos performances actuelles." },
-            { title: "Stratégie", desc: "Création d'un plan d'action personnalisé aligné sur vos objectifs commerciaux." },
-            { title: "Exécution", desc: "Déploiement méticuleux des campagnes et optimisation continue." },
-            { title: "Reporting", desc: "Analyse des résultats et ajustements stratégiques pour maximiser la croissance." }
+            { title: "Audit & Analyse", desc: "Nous analysons votre marché, vos concurrents et vos performances actuelles.", icon: "🔍" },
+            { title: "Stratégie", desc: "Création d'un plan d'action personnalisé aligné sur vos objectifs commerciaux.", icon: "🎯" },
+            { title: "Exécution", desc: "Déploiement méticuleux des campagnes et optimisation continue.", icon: "⚡" },
+            { title: "Reporting", desc: "Analyse des résultats et ajustements stratégiques pour maximiser la croissance.", icon: "📈" }
         ]
     },
     services: {
@@ -55,31 +55,38 @@ export const fr = {
         items: [
             {
                 id: 1,
-                title: "Marketing Digital",
-                desc: "Stratégies SEO, SEA et Social Ads pour maximiser votre ROI et dominer votre marché.",
-                icon: "🚀",
-                points: ["SEO & Netlinking", "Google Ads (SEA)", "Social Ads (Meta, TikTok)", "Growth Hacking"]
+                title: "Production Audiovisuelle",
+                desc: "Création de contenus vidéos percutants qui racontent votre histoire et captivent votre audience.",
+                icon: "🎥",
+                points: ["Vidéo Corporate", "Motion Design", "Publicités TV/Web", "Post-production"]
             },
             {
                 id: 2,
-                title: "Branding & Design",
-                desc: "Création d'identités visuelles fortes, modernes et mémorables qui captivent votre audience.",
-                icon: "🎨",
-                points: ["Identité Visuelle", "Logo & Charte Graphique", "UI/UX Design", "Motion Design"]
+                title: "Développement Web",
+                desc: "Conception de sites web ultra-performants, sécurisés et optimisés pour la conversion.",
+                icon: "💻",
+                points: ["Sites Vitrines High-end", "E-commerce (Shopify/Next)", "Web Apps & SaaS", "SEO Technique"]
             },
             {
                 id: 3,
-                title: "Développement Web",
-                desc: "Sites web performants, ergonomiques et optimisés pour la conversion et le SEO.",
-                icon: "💻",
-                points: ["Sites Vitrines High-end", "E-commerce (Shopify/Next)", "Web Apps & SaaS", "Maintenance & Securité"]
+                title: "Social Media Management",
+                desc: "Gestion stratégique de votre présence sociale pour bâtir une communauté engagée et fidèle.",
+                icon: "📱",
+                points: ["Stratégie de Contenu", "Community Management", "Veille E-réputation", "Influence Marketing"]
             },
             {
                 id: 4,
-                title: "Consulting Stratégique",
-                desc: "Accompagnement personnalisé et audit pour optimiser vos processus et votre croissance.",
+                title: "Media Buying",
+                desc: "Optimisation de vos budgets publicitaires pour un retour sur investissement maximal sur tous les canaux.",
                 icon: "📈",
-                points: ["Audit Marketing 360", "Plan de Croissance", "Analyse de Données", "Formation & Coaching"]
+                points: ["Google Ads (SEA)", "Meta Ads (FB/IG)", "TikTok & LinkedIn Ads", "Audit & Optimisation ROI"]
+            },
+            {
+                id: 5,
+                title: "Graphic Design & Branding",
+                desc: "Donnez vie à votre marque avec une identité visuelle unique et mémorable.",
+                icon: "🎨",
+                points: ["Logo & Charte Graphique", "UI/UX Design", "Supports de Com", "Brand Storytelling"]
             }
         ],
         viewAll: "Voir tous nos services"
@@ -155,54 +162,12 @@ export const fr = {
             subtitle: "Une équipe pluridisciplinaire d'experts passionnés par la data et la performance."
         }
     },
-    projectsPage: {
-        title: "Nos Réalisations",
-        subtitle: "Découvrez comment nous transformons les défis de nos clients en succès digitaux mesurables.",
-        categories: {
-            all: "Tous",
-            marketing: "Marketing",
-            branding: "Branding",
-            web: "Développement"
-        },
-        items: [
-            {
-                id: 1,
-                title: "TechStart Maroc",
-                category: "Branding & Web",
-                catKey: "web",
-                results: "+150% de leads en 3 mois",
-                desc: "Refonte complète de l'identité visuelle et déploiement d'un site web haute performance.",
-                bgImage: campingResult1
-            },
-            {
-                id: 2,
-                title: "Green Valley",
-                category: "Social Ads",
-                catKey: "marketing",
-                results: "ROI de 5.2x stable",
-                desc: "Campagnes Meta & TikTok Ads optimisées pour une marque d'immobilier de luxe.",
-                bgImage: campingResult2
-            },
-            {
-                id: 3,
-                title: "Urban Style",
-                category: "E-commerce",
-                catKey: "web",
-                results: "+80% de ventes en ligne",
-                desc: "Création d'une plateforme Shopify sur-mesure avec une expérience client ultra-fluide.",
-                bgImage: campingResult1
-            },
-            {
-                id: 4,
-                title: "AutoElite",
-                category: "Lead Gen",
-                catKey: "marketing",
-                results: "CPL réduit de 40%",
-                desc: "Stratégie d'acquisition multi-canaux pour un concessionnaire automobile premium.",
-                bgImage: campingResult2
-            }
-        ],
-        cta: "Prêt à être notre prochain succès ?"
+    blogsPage: {
+        title: "Notre Blog & Actualités",
+        subtitle: "Découvrez nos derniers articles, conseils et analyses sur le marketing digital et la data.",
+        readMore: "Lire l'article",
+        backToBlogs: "Retour aux blogs",
+        cta: "Prêt à propulser votre business ?"
     },
     contactPage: {
         title: "Discutons de votre",
@@ -237,7 +202,7 @@ export const en = {
         home: "Home",
         about: "About Us",
         services: "Services",
-        projects: "Projects",
+        blogs: "Blogs",
         contact: "Contact"
     },
     hero: {
@@ -255,29 +220,29 @@ export const en = {
         { label: "Client Satisfaction", value: "98", suffix: "%" }
     ],
     expertise: {
-        title: "Proven Results, Accelerated Growth",
-        subtitle: "Discover how we transform metrics into tangible revenue through our tailored strategies.",
+        title: "Cutting-edge Expertise, Measurable Impact",
+        subtitle: "We combine audiovisual creativity and advertising intelligence for outstanding results.",
         card1: {
-            badge: "Social Engagement",
-            title: "Boost Engagement, Multiply Profits!",
-            desc: "We enhance client engagement on social media with innovative content strategies and intelligent targeting.",
-            benefits: ["+150% interaction", "Viral content strategy"]
+            badge: "Content & Social",
+            title: "Capture Tech Attention with Exceptional Content",
+            desc: "We create impactful audiovisual productions and manage your social media to transform the audience into a loyal community.",
+            benefits: ["4K Video Production", "Strategic Storytelling"]
         },
         card2: {
-            badge: "Ads Performance",
-            title: "Optimize Your Revenue: Profitability Simplified",
-            desc: "We forge a dynamic online presence by integrating holistic marketing solutions beyond mere visibility.",
-            benefits: ["ROAS maximization", "Data-driven campaigns"]
+            badge: "Performance & Ads",
+            title: "Maximize Your Visibility and ROI",
+            desc: "Expert optimization of your Media Buying campaigns and deployment of high-performance websites for maximum conversion.",
+            benefits: ["Optimized ROAS", "High-Performance Websites"]
         }
     },
     process: {
         title: "Our Success Process",
         subtitle: "A rigorous methodology for predictable results.",
         steps: [
-            { title: "Audit & Analysis", desc: "We analyze your market, competitors, and current performance." },
-            { title: "Strategy", desc: "Creating a personalized action plan aligned with your business goals." },
-            { title: "Execution", desc: "Meticulous campaign deployment and continuous optimization." },
-            { title: "Reporting", desc: "Result analysis and strategic adjustments to maximize growth." }
+            { title: "Audit & Analysis", desc: "We analyze your market, competitors, and current performance.", icon: "🔍" },
+            { title: "Strategy", desc: "Creating a personalized action plan aligned with your business goals.", icon: "🎯" },
+            { title: "Execution", desc: "Meticulous campaign deployment and continuous optimization.", icon: "⚡" },
+            { title: "Reporting", desc: "Result analysis and strategic adjustments to maximize growth.", icon: "📈" }
         ]
     },
     services: {
@@ -286,31 +251,38 @@ export const en = {
         items: [
             {
                 id: 1,
-                title: "Digital Marketing",
-                desc: "SEO, SEA, and Social Ads strategies to maximize your ROI and dominate your market.",
-                icon: "🚀",
-                points: ["SEO & Netlinking", "Google Ads (SEA)", "Social Ads (Meta, TikTok)", "Growth Hacking"]
+                title: "Audiovisual Production",
+                desc: "Creating impactful video content that tells your story and captivates your audience.",
+                icon: "🎥",
+                points: ["Corporate Video", "Motion Design", "TV/Web Commercials", "Post-production"]
             },
             {
                 id: 2,
-                title: "Branding & Design",
-                desc: "Creation of strong, modern, and memorable visual identities that captivate your audience.",
-                icon: "🎨",
-                points: ["Visual Identity", "Logo & Graphic Guidelines", "UI/UX Design", "Motion Design"]
+                title: "Web Development",
+                desc: "Designing ultra-performance, secure, and conversion-optimized websites.",
+                icon: "💻",
+                points: ["High-end Showroom Sites", "E-commerce (Shopify/Next)", "Web Apps & SaaS", "Technical SEO"]
             },
             {
                 id: 3,
-                title: "Web Development",
-                desc: "High-performance, user-friendly websites optimized for conversion and SEO.",
-                icon: "💻",
-                points: ["High-end Showroom Sites", "E-commerce (Shopify/Next)", "Web Apps & SaaS", "Maintenance & Security"]
+                title: "Social Media Management",
+                desc: "Strategic management of your social presence to build an engaged and loyal community.",
+                icon: "📱",
+                points: ["Content Strategy", "Community Management", "E-reputation Monitoring", "Influence Marketing"]
             },
             {
                 id: 4,
-                title: "Strategic Consulting",
-                desc: "Personalized support and audit to optimize your processes and growth.",
+                title: "Media Buying",
+                desc: "Optimizing your advertising budgets for maximum ROI across all channels.",
                 icon: "📈",
-                points: ["360 Marketing Audit", "Growth Roadmap", "Data Analysis", "Training & Coaching"]
+                points: ["Google Ads (SEA)", "Meta Ads (FB/IG)", "TikTok & LinkedIn Ads", "ROI Audit & Optimization"]
+            },
+            {
+                id: 5,
+                title: "Graphic Design & Branding",
+                desc: "Bring your brand to life with a unique and memorable visual identity.",
+                icon: "🎨",
+                points: ["Logo & Visual Identity", "UI/UX Design", "Communication Assets", "Brand Storytelling"]
             }
         ],
         viewAll: "View All Services"
@@ -386,54 +358,12 @@ export const en = {
             subtitle: "A multidisciplinary team of experts passionate about data and performance."
         }
     },
-    projectsPage: {
-        title: "Our Success Stories",
-        subtitle: "Discover how we turn our clients' challenges into measurable digital successes.",
-        categories: {
-            all: "All",
-            marketing: "Marketing",
-            branding: "Branding",
-            web: "Development"
-        },
-        items: [
-            {
-                id: 1,
-                title: "TechStart Morocco",
-                category: "Branding & Web",
-                catKey: "web",
-                results: "+150% leads in 3 months",
-                desc: "Complete visual identity overhaul and deployment of a high-performance website.",
-                bgImage: campingResult1
-            },
-            {
-                id: 2,
-                title: "Green Valley",
-                category: "Social Ads",
-                catKey: "marketing",
-                results: "Stable 5.2x ROI",
-                desc: "Optimized Meta & TikTok Ads campaigns for a luxury real estate brand.",
-                bgImage: campingResult2
-            },
-            {
-                id: 3,
-                title: "Urban Style",
-                category: "E-commerce",
-                catKey: "web",
-                results: "+80% online sales",
-                desc: "Creation of a custom Shopify platform with an ultra-smooth customer experience.",
-                bgImage: campingResult1
-            },
-            {
-                id: 4,
-                title: "AutoElite",
-                category: "Lead Gen",
-                catKey: "marketing",
-                results: "CPL reduced by 40%",
-                desc: "Multi-channel acquisition strategy for a premium car dealership.",
-                bgImage: campingResult2
-            }
-        ],
-        cta: "Ready to be our next success story?"
+    blogsPage: {
+        title: "Our Blog & News",
+        subtitle: "Explore our latest articles, tips, and insights on digital marketing and data.",
+        readMore: "Read More",
+        backToBlogs: "Back to Blogs",
+        cta: "Ready to grow your business?"
     },
     contactPage: {
         title: "Let's talk about your",
