@@ -21,7 +21,7 @@ const Navbar = () => {
         { name: t.nav.home, path: '/' },
         { name: t.nav.about, path: '/about' },
         { name: t.nav.services, path: '/services' },
-        { name: t.nav.projects, path: '/projects' },
+        { name: t.nav.blogs, path: '/blogs' },
         { name: t.nav.contact, path: '/contact' },
     ];
 
@@ -32,7 +32,7 @@ const Navbar = () => {
             <div className="container-custom flex justify-between items-center">
                 {/* Logo */}
                 <Link to="/" className="flex items-center" onClick={() => setMobileMenuOpen(false)}>
-                    <img src={logo} alt="OptiDigital" width="150" height="40" className="h-10 w-auto" />
+                    <img src={logo} alt="OptiDigital" className="h-12 md:h-14 w-auto object-contain transition-transform duration-300 hover:scale-105" />
                 </Link>
 
                 {/* Desktop Nav */}
