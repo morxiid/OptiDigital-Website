@@ -10,15 +10,15 @@ const About = () => {
 
     const team = [
         {
-            name: "Anass Elkharifi",
-            role: "CEO & Founder",
+            name: "Morchiid Aymane",
+            role: "Web Developer",
             image: member1,
             color: "bg-blue-600",
             desc: "Expertise en stratégie digitale et visionnaire du marketing de demain."
         },
         {
-            name: "Karim Benjelloun",
-            role: "Head of Strategy",
+            name: "Anass Elkharifi",
+            role: "CEO & Founder",
             image: member2,
             color: "bg-brand-lime",
             desc: "Spécialiste de la croissance accélérée et de l'optimisation du ROI."

@@ -17,8 +17,8 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                     {/* Brand Column */}
                     <div>
-                        <Link to="/" className="inline-block mb-6">
-                            <img src={logo} alt="OptiDigital" width="140" height="36" className="h-9 w-auto brightness-0 invert object-contain" />
+                        <Link to="/" className="inline-block mb-8">
+                            <img src={logo} alt="OptiDigital" className="h-12 md:h-14 w-auto brightness-0 invert object-contain transition-transform duration-300 hover:scale-105" />
                         </Link>
                         <p className="text-gray-400 mb-6 leading-relaxed">
                             Nous transformons les défis digitaux en opportunités de croissance. Votre partenaire de confiance pour le digital au Maroc et à l'international.
@@ -43,7 +43,7 @@ const Footer = () => {
                     <div>
                         <h4 className="text-lg font-bold mb-6 text-white">Liens Rapides</h4>
                         <ul className="space-y-3">
-                            {['Home', 'About', 'Services', 'Projects', 'Contact'].map((link, i) => (
+                            {['Home', 'About', 'Services', 'Blogs', 'Contact'].map((link, i) => (
                                 <li key={i}>
                                     <Link to={link === 'Home' ? '/' : `/${link.toLowerCase()}`} className="text-gray-400 hover:text-brand-lime transition-colors">
                                         {link}
@@ -57,7 +57,7 @@ const Footer = () => {
                     <div>
                         <h4 className="text-lg font-bold mb-6 text-white">Services</h4>
                         <ul className="space-y-3">
-                            {['Digital Marketing', 'Branding', 'Web Development', 'Consulting'].map((link, i) => (
+                            {['Audiovisual Production', 'Web Development', 'Social Media', 'Media Buying', 'Branding'].map((link, i) => (
                                 <li key={i}>
                                     <Link to="/services" className="text-gray-400 hover:text-brand-lime transition-colors">
                                         {link}
@@ -73,7 +73,7 @@ const Footer = () => {
                         <ul className="space-y-4 text-gray-400">
                             <li className="flex items-start gap-3">
                                 <span>📍</span>
-                                <span>Casablanca, Morocco</span>
+                                <span>Boulevard Al Maghreb Al arabi Al Azhar Sidi bernoussi Casablanca</span>
                             </li>
                             <li className="flex items-center gap-3">
                                 <span>📧</span>
