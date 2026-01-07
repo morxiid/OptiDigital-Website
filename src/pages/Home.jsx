@@ -49,30 +49,79 @@ const Home = () => {
                 {/* Animated Background Elements */}
                 {/* Animated Background Elements */}
                 <div className="absolute inset-0 -z-10 overflow-hidden bg-white">
-                    {/* Tech Grid Pattern */}
-                    <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:32px_32px]"></div>
-
-                    {/* Blob 1: Brand Blue (Top Left) - Optimized */}
+                    {/* Animated Grid Pattern */}
                     <motion.div
-                        className="hidden md:block absolute top-[-10%] left-[-5%] w-[600px] h-[600px] bg-brand-blue/10 rounded-full blur-[120px] pointer-events-none"
-                        style={{ willChange: "transform", transform: "translate3d(0,0,0)" }}
-                        animate={{
-                            x: [0, 60, 0],
-                            y: [0, 40, 0],
+                        className="absolute inset-0 opacity-[0.4]"
+                        style={{
+                            backgroundImage: 'linear-gradient(to right, #80808012 1px, transparent 1px), linear-gradient(to bottom, #80808012 1px, transparent 1px)',
+                            backgroundSize: '40px 40px'
                         }}
-                        transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
+                        animate={{
+                            backgroundPosition: ["0px 0px", "40px 40px"]
+                        }}
+                        transition={{
+                            duration: 4,
+                            repeat: Infinity,
+                            ease: "linear"
+                        }}
                     />
 
-                    {/* Blob 2: Brand Lime (Bottom Right) - Optimized */}
+                    {/* Blob 1: Brand Blue (Top Left) */}
                     <motion.div
-                        className="hidden md:block absolute bottom-[-10%] right-[-5%] w-[500px] h-[500px] bg-brand-lime/10 rounded-full blur-[100px] pointer-events-none"
-                        style={{ willChange: "transform", transform: "translate3d(0,0,0)" }}
+                        className="absolute top-[-20%] left-[-10%] w-[700px] h-[700px] bg-brand-blue/10 rounded-full blur-[120px] mix-blend-multiply pointer-events-none"
                         animate={{
-                            x: [0, -60, 0],
-                            y: [0, -30, 0],
+                            x: [0, 100, 0],
+                            y: [0, 50, 0],
+                            scale: [1, 1.1, 1]
                         }}
-                        transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
+                        transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
                     />
+
+                    {/* Blob 2: Brand Lime (Bottom Right) */}
+                    <motion.div
+                        className="absolute bottom-[-20%] right-[-10%] w-[600px] h-[600px] bg-brand-lime/10 rounded-full blur-[100px] mix-blend-multiply pointer-events-none"
+                        animate={{
+                            x: [0, -70, 0],
+                            y: [0, -50, 0],
+                            scale: [1, 1.2, 1]
+                        }}
+                        transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
+                    />
+
+                    {/* Blob 3: Center Accent */}
+                    <motion.div
+                        className="absolute top-[40%] left-[30%] w-[400px] h-[400px] bg-purple-500/5 rounded-full blur-[100px] mix-blend-multiply pointer-events-none hidden md:block"
+                        animate={{
+                            x: [0, -30, 30, 0],
+                            y: [0, 30, -30, 0],
+                            opacity: [0.3, 0.6, 0.3]
+                        }}
+                        transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+                    />
+
+                    {/* Floating Particles */}
+                    {[...Array(6)].map((_, i) => (
+                        <motion.div
+                            key={i}
+                            className="absolute bg-brand-blue/20 rounded-full pointer-events-none"
+                            style={{
+                                width: Math.random() * 20 + 10 + "px",
+                                height: Math.random() * 20 + 10 + "px",
+                                left: Math.random() * 100 + "%",
+                                top: Math.random() * 100 + "%",
+                            }}
+                            animate={{
+                                y: [0, -100, 0],
+                                x: [0, Math.random() * 50 - 25, 0],
+                                opacity: [0, 0.5, 0]
+                            }}
+                            transition={{
+                                duration: Math.random() * 10 + 10,
+                                repeat: Infinity,
+                                ease: "linear"
+                            }}
+                        />
+                    ))}
                 </div>
 
                 <div className="container-custom relative z-10 text-center">
