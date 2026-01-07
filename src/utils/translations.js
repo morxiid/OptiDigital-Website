@@ -105,10 +105,9 @@ export const fr = {
     testimonials: {
         title: "Ce que disent nos clients",
         items: [
-            { name: "Yassine Mansouri", role: "CEO, TechFlow", text: "Une collaboration exceptionnelle. Les résultats ont dépassé nos attentes dès le premier mois." },
-            { name: "Sarah Smith", role: "Directrice Marketing, EcoLife", text: "OptiDigital a transformé notre présence en ligne. Leur approche data-driven est impressionnante." },
-            { name: "Marc Dubois", role: "Fondateur, StartupX", text: "Professionnalisme et créativité. L'équipe est réactive et force de proposition." },
-            { name: "Ahmed Benali", role: "DG, RetailPlus", text: "Le ROI de nos campagnes a doublé en 3 mois. Je recommande vivement." }
+            { name: "Jawad Sebbah", role: "Fondateur, ProHygieneSolutions", text: "Leur stratégie a complètement transformé notre présence en ligne. Nos publications génèrent désormais de vraies interactions et de nouveaux clients chaque semaine." },
+            { name: "Nohaila Erradi", role: "Responsable Marketing, Aich’art", text: "Grâce à leur stratégie de publicité Meta et Google, on a multiplié nos prospects par 4 en seulement deux semaines ! Ils ont su cibler exactement le bon public et optimiser chaque dirham investi." },
+            { name: "Anass Chaouki", role: "Fondateur, Livingspace", text: "Un grand merci à toi Anass. Grâce à ton accompagnement en marketing digital, notre business a vraiment pu se développer. Tes conseils et ton travail ont fait une vraie différence." }
         ]
     },
     contactHome: {
@@ -157,6 +156,10 @@ export const fr = {
                 { title: "Engagement", desc: "Votre succès est notre unique indicateur de performance. Nous nous investissons comme si c'était notre propre business." }
             ]
         },
+        event: {
+            title: "OptiDigital au Sommet",
+            desc: "Retour en images sur la participation du Founder de OptiDigital au Future of Work Forum Africa – Édition 2025, événement majeur réunissant les acteurs institutionnels et économiques autour des enjeux stratégiques liés à l’évolution du marché du travail en Afrique, en présence de Dr. Younes Sekkouri, Ministre de l’Inclusion économique, de la Petite Entreprise, de l’Emploi et des Compétences."
+        },
         team: {
             title: "Les Esprits derrière le Succès",
             subtitle: "Une équipe pluridisciplinaire d'experts passionnés par la data et la performance."
@@ -186,7 +189,7 @@ export const fr = {
         },
         office: {
             title: "Siège Social",
-            address: "Casablanca, Morocco",
+            address: "Boulevard Al Maghreb Al arabi Al Azhar Sidi bernoussi Casablanca",
             phone: "+212 660 583 710",
             email: "contact@optidigital.ma"
         },
@@ -301,10 +304,9 @@ export const en = {
     testimonials: {
         title: "What our clients say",
         items: [
-            { name: "Yassine Mansouri", role: "CEO, TechFlow", text: "An exceptional collaboration. The results exceeded our expectations from the first month." },
-            { name: "Sarah Smith", role: "Marketing Director, EcoLife", text: "OptiDigital transformed our online presence. Their data-driven approach is impressive." },
-            { name: "Marc Dubois", role: "Founder, StartupX", text: "Professionalism and creativity. The team is responsive and proactive." },
-            { name: "Ahmed Benali", role: "GM, RetailPlus", text: "Our campaign ROI doubled in 3 months. I highly recommend them." }
+            { name: "Jawad Sebbah", role: "Founder, ProHygieneSolutions", text: "Their strategy completely transformed our online presence. Our posts now generate real interactions and new clients every week." },
+            { name: "Nohaila Erradi", role: "Marketing Manager, Aich’art", text: "Thanks to their Meta and Google advertising strategy, we multiplied our leads by 4 in just two weeks! They knew how to target exactly the right audience and optimize every dirham invested." },
+            { name: "Anass Chaouki", role: "Founder, Livingspace", text: "A big thank you to you Anass. Thanks to your digital marketing support, our business was really able to grow. Your advice and work made a real difference." }
         ]
     },
     contactHome: {
@@ -353,6 +355,10 @@ export const en = {
                 { title: "Commitment", desc: "Your success is our only performance indicator. We invest ourselves as if it were our own business." }
             ]
         },
+        event: {
+            title: "OptiDigital at the Summit",
+            desc: "A look back at the participation of OptiDigital's Founder at the Future of Work Forum Africa – 2025 Edition, a major event bringing together institutional and economic players around strategic issues related to the evolution of the labor market in Africa, in the presence of Dr. Younes Sekkouri, Minister of Economic Inclusion, Small Business, Employment and Skills."
+        },
         team: {
             title: "The Minds Behind Success",
             subtitle: "A multidisciplinary team of experts passionate about data and performance."
@@ -382,7 +388,7 @@ export const en = {
         },
         office: {
             title: "Headquarters",
-            address: "Casablanca, Morocco",
+            address: "Boulevard Al Maghreb Al arabi Al Azhar Sidi bernoussi Casablanca",
             phone: "+212 660 583 710",
             email: "contact@optidigital.ma"
         },
