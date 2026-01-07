@@ -1,34 +1,39 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { motion, AnimatePresence } from 'framer-motion';
-import member1 from '../assets/Team/member1.png';
-import member2 from '../assets/Team/member2.png';
-import member3 from '../assets/Team/member3.png';
+import member1 from '../assets/Team/member1.webp';
+import member2 from '../assets/Team/member2.webp';
+import member3 from '../assets/Team/member3.webp';
+import member4 from '../assets/Team/member4.webp';
+import eventImage from '../assets/img.webp';
 
 const About = () => {
     const { t } = useLanguage();
 
     const team = [
         {
-            name: "Morchiid Aymane",
-            role: "Web Developer",
+            name: "Anass",
+            role: "Editer & filmmaker",
             image: member1,
             color: "bg-blue-600",
-            desc: "Expertise en stratégie digitale et visionnaire du marketing de demain."
         },
         {
-            name: "Anass Elkharifi",
-            role: "CEO & Founder",
+            name: "Jamal",
+            role: "Media Buyer",
             image: member2,
             color: "bg-brand-lime",
-            desc: "Spécialiste de la croissance accélérée et de l'optimisation du ROI."
         },
         {
-            name: "Yasmine Tazi",
-            role: "Creative Director",
+            name: "Anass",
+            role: "Founder & Project Manager",
             image: member3,
             color: "bg-purple-600",
-            desc: "Donne vie aux marques avec des identités visuelles percutantes."
+        },
+        {
+            name: "Morchiid",
+            role: "Web Developer",
+            image: member4,
+            color: "bg-purple-600",
         },
     ];
 
@@ -186,6 +191,55 @@ const About = () => {
                 </div>
             </section>
 
+            {/* Event Section - Overlapping Layout */}
+            <section className="py-24 bg-white relative overflow-hidden">
+                {/* Background Decor */}
+                <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[800px] h-[800px] bg-gray-50 rounded-full blur-3xl opacity-50 -z-10"></div>
+
+                <div className="container-custom relative">
+                    <div className="relative lg:min-h-[600px] flex flex-col justify-center">
+
+                        {/* Image Block - Right Aligned */}
+                        <motion.div
+                            className="lg:absolute lg:right-0 lg:top-0 lg:w-[65%] w-full h-[400px] lg:h-[600px] z-0"
+                            initial={{ opacity: 0, x: 50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                        >
+                            <div className="w-full h-full relative">
+                                <div className="absolute inset-0 bg-brand-blue/10 rounded-[3rem] transform rotate-2"></div>
+                                <img
+                                    src={eventImage}
+                                    alt="Event"
+                                    className="w-full h-full object-cover rounded-[3rem] shadow-2xl relative z-10"
+                                />
+                            </div>
+                        </motion.div>
+
+                        {/* Text Block - Left Aligned & Overlapping */}
+                        <motion.div
+                            className="relative z-10 mt-[-100px] lg:mt-0 lg:w-[50%] bg-gray-900 text-white p-10 md:p-14 rounded-[3rem] shadow-[0_20px_50px_rgba(0,0,0,0.3)] border-4 border-white"
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.2, duration: 0.8 }}
+                        >
+                            <div className="inline-block px-4 py-2 bg-brand-lime/20 border border-brand-lime/30 rounded-full text-brand-lime font-bold text-xs uppercase tracking-widest mb-6">
+                                Event Highlight
+                            </div>
+                            <h2 className="text-3xl font-black mb-6 leading-tight text-brand-lime">
+                                {t.aboutPage.event.title}
+                            </h2>
+                            <p className="text-lg text-gray-300 leading-relaxed font-light">
+                                {t.aboutPage.event.desc}
+                            </p>
+                        </motion.div>
+
+                    </div>
+                </div>
+            </section>
+
             {/* Team Section */}
             <section className="py-24 bg-gray-50 overflow-hidden">
                 <div className="container-custom">
@@ -201,7 +255,7 @@ const About = () => {
                         </p>
                     </motion.div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {team.map((member, idx) => (
                             <motion.div
                                 key={idx}
@@ -221,28 +275,8 @@ const About = () => {
                                 </div>
                                 <h3 className="text-2xl font-black text-gray-900 mb-1">{member.name}</h3>
                                 <p className="text-brand-blue font-bold text-sm uppercase tracking-widest mb-6">{member.role}</p>
-                                <p className="text-gray-500 leading-relaxed italic">
-                                    "{member.desc}"
-                                </p>
 
-                                {/* Social Indicators */}
-                                <div className="mt-8 flex justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                    <div className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:text-brand-blue hover:bg-brand-blue/10 cursor-pointer transition-all">
-                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
-                                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" />
-                                        </svg>
-                                    </div>
-                                    <div className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:text-brand-blue hover:bg-brand-blue/10 cursor-pointer transition-all">
-                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
-                                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
-                                        </svg>
-                                    </div>
-                                    <div className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:text-brand-blue hover:bg-brand-blue/10 cursor-pointer transition-all">
-                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
-                                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" /><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-                                        </svg>
-                                    </div>
-                                </div>
+
                             </motion.div>
                         ))}
                     </div>
