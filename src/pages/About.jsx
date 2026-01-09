@@ -96,7 +96,7 @@ const About = () => {
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                                         </svg>
                                     </div>
-                                    <h2 className="text-3xl font-extrabold mb-4 text-gray-900">{t.aboutPage.mission.title}</h2>
+                                    <h2 className="text-3xl font-extrabold mb-4 text-blue-600">{t.aboutPage.mission.title}</h2>
                                     <p className="text-gray-600 text-lg leading-relaxed">
                                         {t.aboutPage.mission.desc}
                                     </p>
@@ -109,7 +109,7 @@ const About = () => {
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                                         </svg>
                                     </div>
-                                    <h2 className="text-3xl font-extrabold mb-4 text-gray-900">{t.aboutPage.vision.title}</h2>
+                                    <h2 className="text-3xl font-extrabold mb-4 text-blue-600">{t.aboutPage.vision.title}</h2>
                                     <p className="text-gray-600 text-lg leading-relaxed">
                                         {t.aboutPage.vision.desc}
                                     </p>
@@ -162,7 +162,7 @@ const About = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">{t.aboutPage.values.title}</h2>
+                        <h2 className="text-4xl md:text-5xl font-extrabold text-blue-600 mb-6">{t.aboutPage.values.title}</h2>
                         <div className="w-20 h-1.5 bg-brand-lime mx-auto rounded-full"></div>
                     </motion.div>
 
@@ -249,7 +249,7 @@ const About = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">{t.aboutPage.team.title}</h2>
+                        <h2 className="text-4xl md:text-5xl font-extrabold text-blue-600 mb-6">{t.aboutPage.team.title}</h2>
                         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                             {t.aboutPage.team.subtitle}
                         </p>

@@ -180,7 +180,7 @@ const Contact = () => {
                         viewport={{ once: true }}
                     >
                         <form ref={form} onSubmit={handleSubmit} className="bg-white p-8 md:p-16 rounded-[3.5rem] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.06)] border border-gray-100">
-                            <h3 className="text-3xl font-black mb-10 text-gray-900">{t.contactPage.formTitle}</h3>
+                            <h3 className="text-3xl font-black mb-10 text-blue-600">{t.contactPage.formTitle}</h3>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                                 <div className="space-y-3">

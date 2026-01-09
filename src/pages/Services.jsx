@@ -76,7 +76,7 @@ const Services = () => {
                                 </div>
 
                                 <div className="mt-auto">
-                                    <h3 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 group-hover:text-brand-blue transition-colors leading-tight">
+                                    <h3 className="text-3xl md:text-4xl font-extrabold text-blue-600 mb-6 group-hover:text-brand-blue transition-colors leading-tight">
                                         {service.title}
                                     </h3>
                                     <p className="text-gray-500 text-lg leading-relaxed mb-8 max-w-md font-medium">
@@ -205,7 +205,7 @@ const Services = () => {
                                         <div className="flex items-center gap-8 mb-12">
                                             <div className="text-8xl drop-shadow-2xl">{selectedService.icon}</div>
                                             <div>
-                                                <h2 className="text-5xl md:text-7xl font-black text-gray-900 leading-tight">
+                                                <h2 className="text-5xl md:text-7xl font-black text-blue-600 leading-tight">
                                                     {selectedService.title}
                                                 </h2>
                                                 <div className="h-2 w-32 bg-brand-blue mt-4 rounded-full"></div>

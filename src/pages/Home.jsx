@@ -235,8 +235,8 @@ const Home = () => {
                         viewport={{ once: true }}
                         variants={containerVariants}
                     >
-                        <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-bold mb-4">
-                            {t.expertise.title.split(',')[0]}, <span className="text-brand-lime">{t.expertise.title.split(',')[1]}</span>
+                        <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-bold mb-4 text-blue-600">
+                            {t.expertise.title.split(',')[0]}, <span className="text-blue-600">{t.expertise.title.split(',')[1]}</span>
                         </motion.h2>
                         <motion.p variants={itemVariants} className="text-gray-600 max-w-2xl mx-auto text-lg">
                             {t.expertise.subtitle}
@@ -388,12 +388,12 @@ const Home = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.1 }}
-                            className="text-5xl md:text-6xl font-black text-gray-900 mb-8 tracking-tighter"
+                            className="text-5xl md:text-6xl font-black text-blue-600 mb-8 tracking-tighter"
                         >
                             {language === 'fr' ? (
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-blue-600">Notre Processus de Succès</span>
+                                <span>Notre Processus de Succès</span>
                             ) : (
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-blue-600">Our Success Process</span>
+                                <span>Our Success Process</span>
                             )}
                         </motion.h2>
                         <motion.p
@@ -502,8 +502,8 @@ const Home = () => {
                             <div className="inline-block px-4 py-2 bg-brand-blue/5 border border-brand-blue/10 rounded-full text-brand-blue font-bold text-sm uppercase tracking-widest mb-6">
                                 Pourquoi Nous ?
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
-                                Propulsez votre <span className="text-brand-blue">croissance</span> avec une expertise data-driven.
+                            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight text-blue-600">
+                                Propulsez votre <span className="text-blue-600">croissance</span> avec une expertise data-driven.
                             </h2>
                             <p className="text-lg text-gray-600 mb-10 leading-relaxed max-w-xl">
                                 {t.whyUs.subtitle} Nous combinons créativité et analyse de données pour transformer chaque interaction en opportunité concrète.
@@ -677,8 +677,8 @@ const Home = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
-                            {t.contactHome.title} <span className="text-brand-blue">{t.contactHome.titleAccent}</span>
+                        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-blue-600">
+                            {t.contactHome.title} <span className="text-blue-600">{t.contactHome.titleAccent}</span>
                         </h2>
                         <p className="text-xl text-gray-500 max-w-2xl mx-auto">
                             {t.contactHome.subtitle}
