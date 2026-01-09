@@ -78,7 +78,7 @@ const Contact = () => {
                         <div className="inline-block px-4 py-1.5 bg-brand-blue/5 border border-brand-blue/10 rounded-full text-brand-blue font-bold text-xs uppercase tracking-widest mb-6">
                             Contact Us
                         </div>
-                        <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight text-gray-900 tracking-tighter">
+                        <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight text-blue-600 tracking-tighter">
                             {t.contactPage.title} <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-lime">
                                 {t.contactPage.titleAccent}

@@ -157,7 +157,7 @@ export const fr = {
             ]
         },
         event: {
-            title: "OptiDigital au Sommet",
+            title: "OPTIDIGITAL au Sommet",
             desc: "Retour en images sur la participation du Founder de OptiDigital au Future of Work Forum Africa – Édition 2025, événement majeur réunissant les acteurs institutionnels et économiques autour des enjeux stratégiques liés à l’évolution du marché du travail en Afrique, en présence de Dr. Younes Sekkouri, Ministre de l’Inclusion économique, de la Petite Entreprise, de l’Emploi et des Compétences."
         },
         team: {
@@ -356,7 +356,7 @@ export const en = {
             ]
         },
         event: {
-            title: "OptiDigital at the Summit",
+            title: "OPTIDIGITAL at the Summit",
             desc: "A look back at the participation of OptiDigital's Founder at the Future of Work Forum Africa – 2025 Edition, a major event bringing together institutional and economic players around strategic issues related to the evolution of the labor market in Africa, in the presence of Dr. Younes Sekkouri, Minister of Economic Inclusion, Small Business, Employment and Skills."
         },
         team: {

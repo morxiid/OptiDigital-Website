@@ -143,7 +143,7 @@ const Home = () => {
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h1 className="text-5xl md:text-7xl font-bold font-heading mb-6 leading-tight">
+                        <h1 className="text-5xl md:text-7xl font-bold font-heading mb-6 leading-tight text-blue-600">
                             {t.hero.title1} <br />
                             <span className="bg-gradient-to-r from-brand-blue via-blue-500 to-brand-lime bg-clip-text text-transparent">
                                 {t.hero.title2}

@@ -26,7 +26,7 @@ const Blogs = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-4xl md:text-6xl font-bold text-brand-text mb-6"
+                        className="text-4xl md:text-6xl font-bold text-blue-600 mb-6"
                     >
                         {t.blogsPage.title}
                     </motion.h1>

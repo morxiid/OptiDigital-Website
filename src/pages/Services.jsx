@@ -30,7 +30,7 @@ const Services = () => {
                         >
                             {language === 'fr' ? 'Nos Solutions Stratégiques' : 'Our Strategic Solutions'}
                         </motion.div>
-                        <h1 className="text-6xl md:text-8xl font-black mb-8 leading-[1.1] text-gray-900 tracking-tighter">
+                        <h1 className="text-6xl md:text-8xl font-black mb-8 leading-[1.1] text-blue-600 tracking-tighter">
                             {language === 'fr' ? (
                                 <>Expertises <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue via-blue-600 to-brand-lime">Haute Performance.</span></>
                             ) : (

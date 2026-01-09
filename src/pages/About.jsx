@@ -12,25 +12,25 @@ const About = () => {
 
     const team = [
         {
-            name: "Anass",
+            name: "Anass Artite",
             role: "Editer & filmmaker",
             image: member1,
             color: "bg-blue-600",
         },
         {
-            name: "Jamal",
+            name: "Jamal Bentaleb",
             role: "Media Buyer",
             image: member2,
             color: "bg-brand-lime",
         },
         {
-            name: "Anass",
+            name: "Anass ELKHARIFI",
             role: "Founder & Project Manager",
             image: member3,
             color: "bg-purple-600",
         },
         {
-            name: "Morchiid",
+            name: "Morchiid Aymane",
             role: "Web Developer",
             image: member4,
             color: "bg-purple-600",
@@ -69,8 +69,8 @@ const About = () => {
                         <div className="inline-block px-4 py-2 bg-brand-blue/5 border border-brand-blue/10 rounded-full text-brand-blue font-bold text-sm uppercase tracking-widest mb-6 border animate-pulse">
                             {t.aboutPage.hero.badge}
                         </div>
-                        <h1 className="text-3xl sm:text-4xl md:text-7xl font-black mb-8 leading-tight text-gray-900 px-4">
-                            {t.aboutPage.hero.title} <span className="text-brand-blue">{t.aboutPage.hero.titleAccent}</span>{t.aboutPage.hero.titleSuffix}
+                        <h1 className="text-3xl sm:text-4xl md:text-7xl font-black mb-8 leading-tight text-blue-600 px-4">
+                            {t.aboutPage.hero.title} <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-lime">{t.aboutPage.hero.titleAccent}</span>{t.aboutPage.hero.titleSuffix}
                         </h1>
                         <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-light">
                             {t.aboutPage.hero.subtitle}
