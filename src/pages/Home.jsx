@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 import campingResult1 from '../assets/campingResult1.webp';
 import campingResult2 from '../assets/campingResult2.webp';
 
@@ -12,15 +13,27 @@ const clientLogos = Object.values(clientLogosModules).map(mod => mod.default);
 const Home = () => {
     const { t, language } = useLanguage();
     const [status, setStatus] = React.useState(null);
+    const form = useRef();
 
     const handleSubmit = (e) => {
         e.preventDefault();
         setStatus('sending');
-        setTimeout(() => {
-            setStatus('success');
-            e.target.reset();
-            setTimeout(() => setStatus(null), 5000);
-        }, 1500);
+
+        emailjs.sendForm(
+            import.meta.env.VITE_EMAILJS_SERVICE_ID,
+            import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+            form.current,
+            import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        )
+            .then((result) => {
+                setStatus('success');
+                e.target.reset();
+                setTimeout(() => setStatus(null), 5000);
+            }, (error) => {
+                console.log(error.text);
+                setStatus('error');
+                setTimeout(() => setStatus(null), 5000);
+            });
     };
 
     const containerVariants = {
@@ -682,12 +695,12 @@ const Home = () => {
                             transition={{ delay: 0.1 }}
                         >
                             <h3 className="text-2xl font-bold mb-8 text-gray-900">{t.contactHome.form.title}</h3>
-                            <form onSubmit={handleSubmit} className="space-y-6">
+                            <form ref={form} onSubmit={handleSubmit} className="space-y-6">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="space-y-2">
                                         <label htmlFor="audit-name" className="text-sm font-bold text-gray-700">{t.contactHome.form.name} *</label>
                                         <input
-                                            name="user_name"
+                                            name="full_name"
                                             required
                                             type="text"
                                             id="audit-name"
@@ -697,7 +710,7 @@ const Home = () => {
                                     <div className="space-y-2">
                                         <label htmlFor="audit-email" className="text-sm font-bold text-gray-700">{t.contactHome.form.email} *</label>
                                         <input
-                                            name="user_email"
+                                            name="email"
                                             required
                                             type="email"
                                             id="audit-email"
@@ -710,7 +723,7 @@ const Home = () => {
                                     <div className="space-y-2">
                                         <label htmlFor="audit-website" className="text-sm font-bold text-gray-700">{t.contactHome.form.website}</label>
                                         <input
-                                            name="user_website"
+                                            name="website"
                                             type="url"
                                             id="audit-website"
                                             className="w-full px-4 py-3 rounded-xl bg-white border border-gray-200 focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-all"
@@ -720,7 +733,7 @@ const Home = () => {
                                     <div className="space-y-2">
                                         <label htmlFor="audit-service" className="text-sm font-bold text-gray-700">{t.contactHome.form.service}</label>
                                         <select
-                                            name="user_service"
+                                            name="service"
                                             id="audit-service"
                                             className="w-full px-4 py-3 rounded-xl bg-white border border-gray-200 focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition-all text-gray-600 appearance-none"
                                         >
@@ -735,7 +748,7 @@ const Home = () => {
                                 <div className="space-y-2">
                                     <label htmlFor="audit-goals" className="text-sm font-bold text-gray-700">{t.contactHome.form.message}</label>
                                     <textarea
-                                        name="user_message"
+                                        name="message"
                                         required
                                         id="audit-goals"
                                         rows="4"

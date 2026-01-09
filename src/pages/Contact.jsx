@@ -1,19 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { motion, AnimatePresence } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
     const { t } = useLanguage();
     const [status, setStatus] = useState(null);
+    const form = useRef();
 
     const handleSubmit = (e) => {
         e.preventDefault();
         setStatus('sending');
-        setTimeout(() => {
-            setStatus('success');
-            e.target.reset();
-            setTimeout(() => setStatus(null), 5000);
-        }, 1500);
+
+        emailjs.sendForm(
+            import.meta.env.VITE_EMAILJS_SERVICE_ID,
+            import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+            form.current,
+            import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        )
+            .then((result) => {
+                setStatus('success');
+                e.target.reset();
+                setTimeout(() => setStatus(null), 5000);
+            }, (error) => {
+                console.log(error.text);
+                setStatus('error');
+                setTimeout(() => setStatus(null), 5000);
+            });
     };
 
     const contactItems = [
@@ -166,14 +179,14 @@ const Contact = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                     >
-                        <form onSubmit={handleSubmit} className="bg-white p-8 md:p-16 rounded-[3.5rem] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.06)] border border-gray-100">
+                        <form ref={form} onSubmit={handleSubmit} className="bg-white p-8 md:p-16 rounded-[3.5rem] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.06)] border border-gray-100">
                             <h3 className="text-3xl font-black mb-10 text-gray-900">{t.contactPage.formTitle}</h3>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                                 <div className="space-y-3">
                                     <label className="text-xs font-black uppercase tracking-widest text-gray-400 ml-1">{t.contactPage.labels.name}</label>
                                     <input
-                                        name="user_name"
+                                        name="full_name"
                                         required
                                         className="w-full px-6 py-5 bg-gray-50 border border-gray-100 rounded-[1.5rem] focus:bg-white focus:border-brand-blue focus:ring-4 focus:ring-brand-blue/5 outline-none transition-all font-medium"
                                         type="text"
@@ -183,7 +196,7 @@ const Contact = () => {
                                 <div className="space-y-3">
                                     <label className="text-xs font-black uppercase tracking-widest text-gray-400 ml-1">{t.contactPage.labels.email}</label>
                                     <input
-                                        name="user_email"
+                                        name="email"
                                         required
                                         className="w-full px-6 py-5 bg-gray-50 border border-gray-100 rounded-[1.5rem] focus:bg-white focus:border-brand-blue focus:ring-4 focus:ring-brand-blue/5 outline-none transition-all font-medium"
                                         type="email"
@@ -196,7 +209,7 @@ const Contact = () => {
                                 <div className="space-y-3">
                                     <label className="text-xs font-black uppercase tracking-widest text-gray-400 ml-1">{t.contactPage.labels.website}</label>
                                     <input
-                                        name="user_website"
+                                        name="website"
                                         className="w-full px-6 py-5 bg-gray-50 border border-gray-100 rounded-[1.5rem] focus:bg-white focus:border-brand-blue focus:ring-4 focus:ring-brand-blue/5 outline-none transition-all font-medium"
                                         type="url"
                                         placeholder="https://example.com"
@@ -206,7 +219,7 @@ const Contact = () => {
                                     <label className="text-xs font-black uppercase tracking-widest text-gray-400 ml-1">{t.contactPage.labels.service}</label>
                                     <div className="relative">
                                         <select
-                                            name="user_service"
+                                            name="service"
                                             className="w-full px-6 py-5 bg-gray-50 border border-gray-100 rounded-[1.5rem] focus:bg-white focus:border-brand-blue outline-none transition-all font-medium appearance-none"
                                         >
                                             <option>Marketing Digital</option>
@@ -226,7 +239,7 @@ const Contact = () => {
                             <div className="mb-10 space-y-3">
                                 <label className="text-xs font-black uppercase tracking-widest text-gray-400 ml-1">{t.contactPage.labels.message}</label>
                                 <textarea
-                                    name="user_message"
+                                    name="message"
                                     required
                                     className="w-full px-6 py-5 bg-gray-50 border border-gray-100 rounded-[1.5rem] focus:bg-white focus:border-brand-blue focus:ring-4 focus:ring-brand-blue/5 outline-none transition-all font-medium h-48 resize-none"
                                     placeholder="Tell us about your next big move..."
