@@ -391,9 +391,9 @@ const Home = () => {
                             className="text-5xl md:text-6xl font-black text-gray-900 mb-8 tracking-tighter"
                         >
                             {language === 'fr' ? (
-                                <>Notre <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-blue-600">Processus</span> de Succès</>
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-blue-600">Notre Processus de Succès</span>
                             ) : (
-                                <>Our Success <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-blue-600">Process</span></>
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-blue-600">Our Success Process</span>
                             )}
                         </motion.h2>
                         <motion.p
